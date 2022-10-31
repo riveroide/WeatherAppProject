@@ -1,0 +1,75 @@
+.card {
+  width: 250px;
+  height: 300px;
+  border: 2px solid #c3c6ce;
+  background: rgba(255, 255, 255, 0.10);
+  border-radius: 20px;
+  box-shadow: 0.3em 0.3em 0.7em #00000015;
+  transition: border 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  backdrop-filter: blur(8px);
+  margin: 20px;
+  }
+
+  .card:hover {
+  border: #006fff 0.2em solid;
+}
+
+.card-title {
+  margin-bottom: 25px;
+  color: white;
+}
+
+#closeIcon {
+  justify-content: flex-end;
+  margin-right: 2px;
+  margin-top: 2px;
+  height: auto;
+  
+}
+
+.card-body {
+  margin-top: 0px !important;
+  padding-top: 0px !important;
+  text-align:center;
+}
+
+.iconoClima {
+  margin-bottom: 15px;
+  background-color: #006fff;
+  border-radius: 50px;
+
+}
+
+.btnclose {
+  font-size: large;
+  border-radius: 10px;
+  border-style: none;
+  color: #006fff;
+  background-color: white;
+  border-color: #006fff;
+  justify-content: flex-end;
+  border-style:double;
+  font-weight:bolder;
+}
+.btnclose:hover{
+  color: white;
+  background-color: #D62828;
+  border-color: white;
+
+}
+
+.contClima{
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin: none;
+  padding-bottom: 15px
+}
+
+.row {
+  
+  color: white;
+  height: 100%;
+  display: flex;
+
+}

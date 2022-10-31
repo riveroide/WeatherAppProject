@@ -1,0 +1,14 @@
+.App {
+  align-items: center;
+}
+
+.row {
+  justify-content: center;
+}
+
+.footer {
+  font-size: x-small;
+  text-align:center;
+  justify-content: center;
+}
+
