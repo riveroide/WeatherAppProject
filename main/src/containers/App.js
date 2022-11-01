@@ -15,6 +15,7 @@ function App() {
   }
   function onSearch(ciudad) {
     //Llamado a la API del clima
+    if (cities.every((e) => e.name.toLowerCase() !== ciudad.toLowerCase())) {
     fetch(`http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apiKey}`)
       .then(r => r.json())
       .then((recurso) => {
@@ -38,6 +39,7 @@ function App() {
           alert("Ciudad no encontrada");
         }
       });
+    } else alert ("Ya existe la ciudad");
     
   }
   // function onFilter(ciudadId) {
@@ -51,7 +53,7 @@ function App() {
   return (
       <div className="App">
         <Nav onSearch={onSearch}/>
-        <p className='footer'>Coded by Nicolás Rivero</p>
+        <p className='footer'>Coded by <a className='linkedin' href='https://www.linkedin.com/in/nicoerivero/'>Nicolás Rivero</a></p>
         <Routes>
           <Route path="/" element={<Cards cities={cities}
     onClose={onClose}/>}/>

@@ -12,3 +12,14 @@
   justify-content: center;
 }
 
+.linkedin{
+  color: white;
+}
+
+.linkedin:hover{
+  color:#264653
+}
+
+.linkedin:visited{
+  color:white;
+}
