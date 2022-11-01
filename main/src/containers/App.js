@@ -8,14 +8,20 @@ import Ciudad from '../components/Ciudad.jsx';
 
 const apiKey = '4ae2636d8dfbdc3044bede63951a019b';
 
+
 function App() {
   const [cities, setCities] = useState([]);
+  const removeAccents = (str) => {
+    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  }
+
   function onClose(id) {
     setCities(oldCities => oldCities.filter(c => c.id !== id));
   }
+
   function onSearch(ciudad) {
-    //Llamado a la API del clima
-    if (cities.every((e) => e.name.toLowerCase() !== ciudad.toLowerCase())) {
+    
+    if (cities.every((e) => removeAccents(e.name.toLowerCase()) !== removeAccents(ciudad.toLowerCase()))) {
     fetch(`http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apiKey}`)
       .then(r => r.json())
       .then((recurso) => {
@@ -42,14 +48,7 @@ function App() {
     } else alert ("Ya existe la ciudad");
     
   }
-  // function onFilter(ciudadId) {
-  //   let ciudad = cities.filter(c => c.id === parseInt(ciudadId));
-  //   if(ciudad.length > 0) {
-  //       return ciudad[0];
-  //   } else {
-  //       return null;
-  //   }
-  // }
+
   return (
       <div className="App">
         <Nav onSearch={onSearch}/>

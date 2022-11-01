@@ -41,21 +41,17 @@
 }
 
 .btnclose {
-  font-size: large;
-  border-radius: 10px;
-  border-style: none;
+  position: relative;
+  bottom: -5px;
   color: #006fff;
-  background-color: white;
-  border-color: #006fff;
-  justify-content: flex-end;
-  border-style:double;
+  background-color: transparent;
+
   font-weight:bolder;
+  border: none;
+  transition: transform .2s;
 }
 .btnclose:hover{
-  color: white;
-  background-color: #D62828;
-  border-color: white;
-
+  transform: scale(1.15);
 }
 
 .contClima{
