@@ -24,11 +24,11 @@ export default function Card ({min, max, name, img, onClose, id}) {
             <h4 className="card-title">{name}</h4>
           </Link>
           <div className="row">
-            <div className="col-sm-4 col-md-4 col-lg-4">
+            <div className="minmax">
               <h5>Min</h5>
               <p>{(min-273.15).toFixed(1)}°C</p>
             </div>
-            <div className="col-sm-4 col-md-4 col-lg-4">
+            <div className="minmax">
               <h5>Max</h5>
               <p>{(max-273.15).toFixed(1)}°C</p>
             </div>

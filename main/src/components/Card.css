@@ -69,3 +69,14 @@
   display: flex;
 
 }
+
+.minmax{
+  height: 100%;
+  width: 35%;
+}
+
+@media(max-width: 500px){
+  .row{
+    
+  }
+}
