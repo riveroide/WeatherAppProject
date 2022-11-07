@@ -4,6 +4,7 @@ import './App.css';
 import Nav from '../components/Nav.jsx';
 import Cards from '../components/Cards.jsx';
 import Ciudad from '../components/Ciudad.jsx';
+import Swal from 'sweetalert2';
 
 
 const apiKey = '4ae2636d8dfbdc3044bede63951a019b';
@@ -42,10 +43,19 @@ function App() {
           };
           setCities(oldCities => [...oldCities, ciudad]);
         } else {
-          alert("Ciudad no encontrada");
+          Swal.fire({
+            title: 'No existe esa ciudad, por favor ingrese otra válida',
+            showClass: {
+              popup: 'animate__animated animate__fadeInDown'
+            },
+            hideClass: {
+              popup: 'animate__animated animate__fadeOutUp'
+            }
+          });
         }
       });
-    } else alert ("Ya existe la ciudad");
+    } else 
+    Swal.fire('Esa ciudad ya está siendo mostrada en pantalla')
     
   }
 
