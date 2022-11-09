@@ -1,6 +1,5 @@
 {
   "name": "09-react-routing",
-  "homepage": "https://riveroide.github.io/WeatherAppProject",
   "version": "1.0.0",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.10",
