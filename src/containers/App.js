@@ -23,7 +23,7 @@ function App() {
   function onSearch(ciudad) {
     
     if (cities.every((e) => removeAccents(e.name.toLowerCase()) !== removeAccents(ciudad.toLowerCase()))) {
-    fetch(`httpsñ://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apiKey}`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apiKey}`)
       .then(r => r.json())
       .then((recurso) => {
         
